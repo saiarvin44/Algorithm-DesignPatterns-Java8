@@ -1,0 +1,16 @@
+def echoIt = {
+    ex -> println(ex)
+}
+
+def echoItClosure = {
+    println "Hello world"
+}
+println echoItClosure()
+
+def twoArgMethod(factor, closure) {
+    closure() * factor
+}
+
+// closure
+println twoArgMethod(4, { 10 })
+

@@ -1,0 +1,28 @@
+defaultTasks 'hello'
+
+logger.info """
+"*****************************************************"
+"build.gradle --> executed during configuration phase"
+"gradle version --> $gradle.gradleVersion"
+"gradle relative path --> ${relativePath(buildFile)}"
+"hasProperty : ${gradle.hasProperty('gradleVersion')}"
+"hasProperty : ${hasProperty('projectDir')}"
+"*****************************************************"
+"""
+if(project.hasProperty("myprop"))
+    logger.info "Property file value is $myprop"
+
+task hi
+
+project.hi.doLast{
+    logger.info "Executing doLast"
+}
+
+task hello {
+    description = "log the name of the class"
+    group = "Welcome"
+
+    doLast {
+        logger.info 'Do Last executed'
+    }
+}

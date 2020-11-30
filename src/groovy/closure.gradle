@@ -1,0 +1,17 @@
+class Person {
+    String name
+    Integer age
+
+    Person(name, age) {
+        this.name = name
+        this.age = age
+    }
+
+    def executeInside(c) {
+        c.delegate = this
+        c()
+    }
+}
+
+def p1 = new Person("arvind", 22)
+p1.executeInside { println age }

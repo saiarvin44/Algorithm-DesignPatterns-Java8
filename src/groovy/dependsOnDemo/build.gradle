@@ -1,0 +1,27 @@
+defaultTasks 'doFinished'
+
+logger.info "build.gradle --> this is executed during configuration phase"
+
+task doStartProcess {
+    doLast {
+        logger.info "starting the process"
+    }
+}
+
+task doStep2 {
+    doLast {
+        logger.info "Performed"
+    }
+}
+
+task doFinished (dependsOn: ['doStartProcess', 'doStep2']) {
+    doLast {
+        logger.info "Performed doFinished"
+    }
+}
+
+logger.info ">>> ${project.tasks.findAll { task -> task.name.startsWith('doStep2') } }"
+
+project.gradle.taskGraph.whenReady {
+    logger.info ">>> $project.gradle.taskGraph.allTasks"
+}
