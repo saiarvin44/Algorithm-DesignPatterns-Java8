@@ -1,4 +1,4 @@
-package strings;
+package CoreJava.strings;
 
 public class SpaceRemoval {
   public static void main(String[] args) {
