@@ -2,10 +2,10 @@ package algorithms.arrays;
 
 public class RainWaterTapping {
     public static void main(String[] args) {
-        int[] arr = new int[]{3, 0, 1, 2, 5};
+        int[] arr = new int[]{1,8,6,2,5,4,8,3,7};
         int maxWater = getWaterSolution1(arr, arr.length);
         int maxWaterAgain = getWaterSolution2(arr, arr.length);
-        System.out.println(maxWaterAgain);
+        System.out.println(maxWater);
     }
 
     private static int getWaterSolution2(int[] arr, int length) {
