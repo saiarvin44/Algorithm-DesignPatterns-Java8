@@ -1,26 +1,9 @@
-package CoreJava.collections;
+package CoreJava.collections.leetcodeAlgos;
 
-public class IntegerAlgos {
-  public static int divide(int dividend, int divisor) {
-    boolean negative = false;
-    int ans = 0;
-    if (dividend == Integer.MIN_VALUE && divisor == 1) return Integer.MIN_VALUE;
-    if (dividend == Integer.MIN_VALUE && divisor == -1) return Integer.MAX_VALUE;
-    if (Math.abs(divisor) > Math.abs(dividend)) return 0;
-    if (dividend < 0 && divisor < 0) negative = false;
-    else if (dividend < 0 || divisor < 0) negative = true;
-    dividend = Math.abs(dividend);
-    while (dividend >= 0) {
-      dividend = Math.abs(dividend) - Math.abs(divisor);
-      if (dividend >= 0) ans++;
-    }
-    if (negative) return (-1 * ans);
-    return ans;
-  }
-
+public class SearchRange {
   public static void main(String[] args) {
     int[] ans = searchRange(new int[] {1, 4}, 4);
-    System.out.print(ans[0] + ":" + ans[1]);
+    System.out.println(ans[0] + ":" + ans[1]);
   }
 
   public static int[] searchRange(int[] nums, int target) {
