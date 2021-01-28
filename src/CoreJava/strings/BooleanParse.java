@@ -7,6 +7,7 @@ public class BooleanParse {
   public static void main(String[] args) {
     Map<String, String> map = new HashMap<>();
     map.put("a", "b");
-    System.out.print("Does boolean parse null ? " + Boolean.parseBoolean(map.get("c")));
+    boolean ans = Boolean.parseBoolean(map.get("c"));
+    System.out.print("Does boolean parse null ? " + ans);
   }
 }
