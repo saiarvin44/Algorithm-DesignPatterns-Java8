@@ -18,16 +18,4 @@ public class LongestIncreasingSubsequence {
     for (int i = 1; i < n; i++) res = Math.max(res, lis[i]);
     return res;
   }
-
-  /*
-  private static int lisOptimised(int[] arr, int n){
-    int[] tail=new int[n];int len=1;
-    tail[0]=arr[0];
-    for(int i=1;i<n;i++){
-      if(arr[i]>tail[len-1]) {tail[len]=arr[i];len++;}
-      else{int c=ceilId()}
-    }
-  }
-  */
-
 }
