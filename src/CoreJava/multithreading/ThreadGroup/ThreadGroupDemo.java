@@ -1,4 +1,4 @@
-package CoreJava.multithreading;
+package CoreJava.multithreading.ThreadGroup;
 
 public class ThreadGroupDemo {
   public static void main(String[] args) {
