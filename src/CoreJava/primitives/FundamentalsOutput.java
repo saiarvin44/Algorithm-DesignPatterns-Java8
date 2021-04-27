@@ -1,4 +1,4 @@
-package CoreJava.collections;
+package CoreJava.primitives;
 
 public class FundamentalsOutput {
   public static void main(String[] args) {
