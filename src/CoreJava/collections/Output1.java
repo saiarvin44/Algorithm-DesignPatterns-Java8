@@ -1,6 +1,8 @@
 package CoreJava.collections;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class Output1 {
   private String s;
@@ -10,6 +12,9 @@ public class Output1 {
   }
 
   public static void main(String[] args) {
+    List<Integer> list = new ArrayList<>();
+    // list.add(3, 1);
+    System.out.print(list);
     HashSet<Object> hs = new HashSet<>();
     Output1 ws1 = new Output1("aardvark");
     Output1 ws2 = new Output1("aardvark");
