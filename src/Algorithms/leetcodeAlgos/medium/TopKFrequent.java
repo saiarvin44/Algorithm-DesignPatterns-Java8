@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class Solution {
+class TopKFrequent {
   public static void main(String[] args) {
     topKFrequent(new int[] {3, 0, 1, 0}, 1);
   }
