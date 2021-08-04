@@ -1,4 +1,4 @@
-package CoreJava.multithreading.basics;
+package CoreJava.multithreading.Synchronization;
 
 class ClassForSync {}
 

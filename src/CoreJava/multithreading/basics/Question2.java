@@ -5,7 +5,6 @@ public class Question2 {
     System.out.print("1 ");
     synchronized (args) {
       System.out.println("2 ");
-      ;
       try {
         args.wait();
       } catch (InterruptedException e) {
