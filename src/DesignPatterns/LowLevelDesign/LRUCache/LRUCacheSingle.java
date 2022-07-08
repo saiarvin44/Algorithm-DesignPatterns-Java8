@@ -5,11 +5,11 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Set;
 
-public class LRUCache {
+public class LRUCacheSingle {
   Set<Integer> cache;
   int capacity;
 
-  public LRUCache(int capacity) {
+  public LRUCacheSingle(int capacity) {
     this.cache = new LinkedHashSet<>(capacity);
     this.capacity = capacity;
   }
@@ -40,7 +40,7 @@ public class LRUCache {
   }
 
   public static void main(String[] args) {
-    LRUCache cache=new LRUCache(4);
+    LRUCacheSingle cache=new LRUCacheSingle(4);
     cache.refer(1);
     cache.refer(2);
     cache.refer(3);
