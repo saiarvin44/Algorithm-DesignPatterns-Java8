@@ -15,6 +15,9 @@ public class Example1 {
 
     public void main(String[] args) {
         A a = new B();
+        B b = (B) new A();
+
+        b.methodA();
         // a.methodB();  // Compile Time error
     }
 }
